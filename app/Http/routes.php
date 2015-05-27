@@ -13,6 +13,11 @@
 
 Route::get('/', 'WelcomeController@index');
 
+Route::get('example', function () 
+{
+	return 'Olá Mundo';
+});
+
 Route::get('home', 'HomeController@index');
 
 Route::controllers([
