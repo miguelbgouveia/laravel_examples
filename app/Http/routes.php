@@ -13,9 +13,13 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::get('example', function () 
-{
-	return 'Olá Mundo';
+Route::get('example', 'PageController@index');
+Route::get('example/about', 'PageController@about');
+
+Route::get('user/{id}', function($id) {
+	
+	return User::findOrFail($id);
+	
 });
 
 Route::get('home', 'HomeController@index');
