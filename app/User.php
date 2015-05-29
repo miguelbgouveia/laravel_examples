@@ -1,4 +1,4 @@
-<?php namespace App;
+<br clear="all"><?php namespace App;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
