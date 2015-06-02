@@ -50,7 +50,7 @@ class SongsController extends Controller {
 		return view('songs.edit', compact('song'));
 	}
 	
-	public function update(Song $song, Request $request) 
+	public function update(Song $song, CreateSongRequest $request) 
 	{
 		//dd(\Request::input());
 		//dd(\Request::get('title'));
@@ -77,6 +77,13 @@ class SongsController extends Controller {
 		
 		return redirect()->route('songs.index');
 	}
+		
+	public function destroy(Song $song) 
+	{
+		$song->delete();
+		
+		return redirect('songs');	
+	} 
 	
 	//private function getSongs()
 	//{
